@@ -63,9 +63,17 @@ const rooster = {
 const animalList = [dog, cat, duck, cow, sheep, rooster];
 const langList = ['fr', 'eng', 'bonus'];
 
+
 // FINDING A RANDOM ANIMAL FOR THE 'SURPRISE' OPTION
-function randoReturn(){    
-    let randomAnim = animalList[Math.floor(Math.random()*animalList.length)];
+function getIndex(){
+    let randIndex =  Math.floor(Math.random() * (5 + 1));
+    return randIndex;
+}
+let randIndex = getIndex();
+console.log(randIndex);
+
+function randoReturn(){
+    let randomAnim = animalList[randIndex];
     let randoName = randomAnim.name;
     return randoName;
 }
@@ -82,7 +90,8 @@ function detailDisplay(){
     if(animalDisp === '6'){
         animalDisp = surpAn;     
         console.log(animalDisp);
-        // find way to get index
+        arrayPos = randIndex;
+        console.log(arrayPos);
      }
     else{
         console.log(arrayPos);

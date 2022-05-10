@@ -63,3 +63,20 @@
 //     }
     
 // }
+
+function indexFind(){
+    let randIndex = 0;
+    for(let count =0, count <animalList.length, count++){
+        if(surpAn === animalList[count].name){
+            randIndex = parseInt(animalList[count]);
+            console.log(randIndex);
+        }
+    }
+
+}
+
+let indexPos = indexFind()
+console.log(indexPos);
+
+
+let randomAnim = animalList[Math.floor(Math.random()*animalList.length)];
