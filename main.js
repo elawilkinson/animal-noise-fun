@@ -1,11 +1,6 @@
-let imgLoc = document.querySelector('#cutie');
-let buttonsLoc = document.querySelector('#randos');
-let animalButton = document.createElement('button');
-animalButton.innerText = 'Click to get a cute animal.'
-buttonsLoc.append(animalButton);
-
-let animalDetails = document.createElement('ul');
-buttonsLoc.append(animalDetails);
+let animalDisplay = document.querySelector('#randos');
+let submitButton = document.querySelector('#clickHere');
+let animalDropdown = document.querySelector('#anims');
 
 const dog = {
     name: 'dog',
@@ -63,20 +58,33 @@ const rooster = {
 
 const animalList = [dog, cat, duck, cow, sheep, rooster];
 const langList = ['fr', 'eng', 'bonus'];
-let randomAnim = animalList[Math.floor(Math.random()*animalList.length)];
-let randoLang = langList[Math.floor(Math.random()*langList.length)]
-console.log(animalList)
-console.log(randomAnim);
-console.log(randoLang);
 
 function randoReturn(){    
-    let newEntry = document.createElement('li');
-    newEntry.textContent = randomAnim.name;
-    animalDetails.append(newEntry);
+    let randomAnim = animalList[Math.floor(Math.random()*animalList.length)];
+    let randoName = randomAnim.name;    
+    let randoLang = langList[Math.floor(Math.random()*langList.length)]
+    animalDisplay.textContent = `${randoName} / ${randoLang}`;    
+    for(i=0; i<animalList.length; i++){
+        if(randoName === animalList[i].name){
+            let animalCard = animalList[i];
+            if(randoLang === "eng"){
+                console.log(animalCard.eng);
+            }
+            else if(randoLang === "fr"){
+                console.log(animalCard.fr);
+            }
+            else if(randoLang === "bonus"){
+                console.log(animalCard.bonus);
+                console.log(animalCard.ans);
+            }
+        }
+    }
 }
 
-animalButton.addEventListener('click', randoReturn);
-
+function detailDisplay(){
+    let animalChoice = 
+}
+submitButton.addEventListener('click', randoReturn);
 
 // ## PLAN
 // # Find (5) animals 
