@@ -24,3 +24,42 @@
 // let imgLoc = document.querySelector('#cutie');
 // let animalDetails = document.createElement('ul');
 // animalDisplay.append(animalDetails);
+
+// for(i=0; i<animalList.length; i++){
+//     if(randoName === animalList[i].name){
+//         let animalCard = animalList[i];
+//         if(randoLang === "eng"){
+//             console.log(animalCard.eng);
+//         }
+//         else if(randoLang === "fr"){
+//             console.log(animalCard.fr);
+//         }
+//         else if(randoLang === "bonus"){
+//             console.log(animalCard.bonus);
+//             console.log(animalCard.ans);
+//         }
+//     }
+// }
+
+
+//     for(i=0; i<animalList.length; i++){
+//         if(randoName === animalList[i].name){
+//         let animalCard = animalList[i];
+//          if(langRel === 1){
+//             animalDisplay.innerText = `This ${randoName} would simply say...\n ${animalCard.eng}`;
+//             console.log(animalCard.eng);
+//             }
+//         else if(langRel === 0){
+//             animalDisplay.innerText = `This ${randoName} would simply say...\n ${animalCard.eng}`
+//             console.log(animalCard.fr);
+//             }
+//         else if(langRel === 2){
+//             animalDisplay.innerText = `This ${randoName} would simply say...\n ${animalCard.bonus}, 
+//             because she is ${animalCard.ans}!`;
+//             console.log(animalCard.bonus);
+//             console.log(animalCard.ans);
+//         }
+//     }
+//     }
+    
+// }

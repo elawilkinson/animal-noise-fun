@@ -1,8 +1,11 @@
+// IDENTIFYING ELEMENTS
 let animalDisplay = document.querySelector('#randos');
 let submitButton = document.querySelector('#clickHere');
 let animalDropdown = document.querySelector('#anims');
 let langDropdown = document.querySelector('#langs');
+let surpriseAnimal = document.querySelector('#anRa');
 
+// DATA INPUT
 const dog = {
     name: 'dog',
     pic: 'https://clipart.world/wp-content/uploads/2020/06/dog-vector-1502158.jpg',
@@ -60,38 +63,50 @@ const rooster = {
 const animalList = [dog, cat, duck, cow, sheep, rooster];
 const langList = ['fr', 'eng', 'bonus'];
 
+// FINDING A RANDOM ANIMAL FOR THE 'SURPRISE' OPTION
 function randoReturn(){    
     let randomAnim = animalList[Math.floor(Math.random()*animalList.length)];
-    let randoName = randomAnim.name;    
-    let randoLang = langList[Math.floor(Math.random()*langList.length)]
-    animalDisplay.textContent = `${randoName} / ${randoLang}`;    
-    for(i=0; i<animalList.length; i++){
-        if(randoName === animalList[i].name){
-            let animalCard = animalList[i];
-            if(randoLang === "eng"){
-                console.log(animalCard.eng);
-            }
-            else if(randoLang === "fr"){
-                console.log(animalCard.fr);
-            }
-            else if(randoLang === "bonus"){
-                console.log(animalCard.bonus);
-                console.log(animalCard.ans);
-            }
-        }
-    }
+    let randoName = randomAnim.name;
+    return randoName;
 }
-// submitButton.addEventListener('click', randoReturn);
+let surpAn = randoReturn();
+console.log(surpAn);
 
+
+// FUNCTIONALITY FOR INPUT FORM, SUBMIT BUTTON AND DISPLAY
 function detailDisplay(){
     let animalChoice = animalDropdown[0];
     let animalDisp = animalChoice.value; 
+    let arrayPos = parseInt(animalDisp);
+    console.log(arrayPos);
+    if(animalDisp === '6'){
+        animalDisp = surpAn;     
+        console.log(animalDisp);
+        // find way to get index
+     }
+    else{
+        console.log(arrayPos);
+        animalDisp = animalList[animalDisp].name;
+        console.log(animalDisp);
+     }
     let langChoice = langDropdown[0];
     let langDisp = langChoice.value;
-    langDisp = langDisp - 1; 
-    console.log(animalList[animalDisp].name);
-    console.log(langList[langDisp]);
-    }
+    console.log(langDisp);
+    let langRel = langDisp - 1; 
+    console.log(langRel);
+    console.log(langList[langRel]);
+    if(langRel === 1){
+        animalDisplay.innerText = `This ${animalDisp} would simply say...\n ${animalList[arrayPos].eng}`;
+        }
+    else if(langRel === 0){
+        animalDisplay.innerText = `This ${animalDisp} would simply say...\n ${animalList[arrayPos].fr}`;
+        }
+    else if(langRel === 2){
+        animalDisplay.innerText = `This ${animalDisp} would simply say...\n ${animalList[arrayPos].bonus}, 
+        because she is ${animalList[arrayPos].ans}`
+        }
+}
+   
 submitButton.addEventListener('click', detailDisplay);
 
 // ## PLAN
