@@ -1,6 +1,7 @@
 let animalDisplay = document.querySelector('#randos');
 let submitButton = document.querySelector('#clickHere');
 let animalDropdown = document.querySelector('#anims');
+let langDropdown = document.querySelector('#langs');
 
 const dog = {
     name: 'dog',
@@ -80,11 +81,18 @@ function randoReturn(){
         }
     }
 }
+// submitButton.addEventListener('click', randoReturn);
 
 function detailDisplay(){
-    let animalChoice = 
-}
-submitButton.addEventListener('click', randoReturn);
+    let animalChoice = animalDropdown[0];
+    let animalDisp = animalChoice.value; 
+    let langChoice = langDropdown[0];
+    let langDisp = langChoice.value;
+    langDisp = langDisp - 1; 
+    console.log(animalList[animalDisp].name);
+    console.log(langList[langDisp]);
+    }
+submitButton.addEventListener('click', detailDisplay);
 
 // ## PLAN
 // # Find (5) animals 
