@@ -1,8 +1,46 @@
 body{
+    margin: 3em; 
+    text-align: center;
     background-color: #ffcbcb;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Playfair Display', serif;
+    border-radius: 10px;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5rem #82f7b5;
  }
+
+#green-box{
+    background-color: #82f7b5;
+    border-radius: 10px;
+}
 
 #cutie{
     width: 100%;
+}
+
+h1{
+    margin: 1em 0em 0em 0em;
+    padding: 1.2em 0.5em 0.5em 0.5em;
+    
+    
+}
+
+button{
+    width: 25%;
+    height: 20%;
+    border: none;
+    outline: none;
+    background: #ed1e74;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+#click-here{
+
 }

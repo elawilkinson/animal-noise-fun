@@ -70,15 +70,14 @@ function getIndex(){
     return randIndex;
 }
 let randIndex = getIndex();
-console.log(randIndex);
 
 function randoReturn(){
     let randomAnim = animalList[randIndex];
     let randoName = randomAnim.name;
     return randoName;
 }
+
 let surpAn = randoReturn();
-console.log(surpAn);
 
 
 // FUNCTIONALITY FOR INPUT FORM, SUBMIT BUTTON AND DISPLAY
@@ -88,6 +87,9 @@ function detailDisplay(){
     let arrayPos = parseInt(animalDisp);
     console.log(arrayPos);
     if(animalDisp === '6'){
+        randIndex = getIndex();
+        surpAn = randoReturn();
+        console.log(surpAn);
         animalDisp = surpAn;     
         console.log(animalDisp);
         arrayPos = randIndex;
