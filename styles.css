@@ -1,15 +1,15 @@
 body{
     margin: 3em; 
     text-align: center;
-    background-color: #ffcbcb;
+    background-color: #1E2749;
     font-family: 'Playfair Display', serif;
     border-radius: 10px;
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: 0 0 5rem #82f7b5;
+    box-shadow: 0 0 5rem #273469
  }
 
 #green-box{
-    background-color: #82f7b5;
+    background-color: #273469
     border-radius: 10px;
 }
 
@@ -20,8 +20,15 @@ body{
 h1{
     margin: 1em 0em 0em 0em;
     padding: 1.2em 0.5em 0.5em 0.5em;
-    
-    
+    color: #FAFAFF;
+}
+
+#animal-label{
+    color:#FAFAFF
+}
+
+#langs{
+    color: #FAFAFF
 }
 
 button{
@@ -29,9 +36,10 @@ button{
     height: 20%;
     border: none;
     outline: none;
-    background: #ed1e74;
-    color: #fff;
+    background: #E4D9FF;
+    color: #1E2749;
     font-size: 18px;
+    font-family: 'Playfair Display', serif;
     border-radius: 40px;
     text-align: center;
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
@@ -40,7 +48,26 @@ button{
     cursor: pointer;
 }
 
+select{
+    font-family: 'Playfair Display', serif;
+    color: #1E2749;
+}
 
-#click-here{
+option{
+    font-family: 'Playfair Display', serif;
+    color: #1E2749;
+}
 
+#randos{
+    background-color: #FAFAFF;
+    display: flex;
+    min-width: 80vw;
+    align-items: center;
+    justify-content: center;
+    color: #1E2749;
+    min-height: 15vh;
+}
+
+#creator-details{
+    color: #FAFAFF;
 }

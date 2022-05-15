@@ -10,7 +10,7 @@ const dog = {
     name: 'dog',
     pic: 'https://clipart.world/wp-content/uploads/2020/06/dog-vector-1502158.jpg',
     eng: 'woof',
-    fr: 'ouaf' ,
+    fr: 'ouaf ouaf' ,
     bonus: 'blaf',
     ans: 'Dutch'
 }
@@ -19,7 +19,7 @@ const cat = {
     name: 'cat',
     pic: 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/6006/cat-clipart-md.png',
     eng: 'meow',
-    fr: 'miaou',
+    fr: 'miaou miaou',
     bonus: 'niav',
     ans: 'Ukrainian'
 }
@@ -28,7 +28,7 @@ const duck = {
     name: 'duck',
     pic: 'https://clipart.world/wp-content/uploads/2020/07/happy-duck.jpg',
     eng: 'quack',
-    fr: 'coin',
+    fr: 'coin coin',
     bonus: 'praaks',
     ans: 'Estonian'
 }
@@ -37,7 +37,7 @@ const cow = {
     name: 'cow',
     pic: 'https://www.kindpng.com/picc/m/38-386643_cow-clipart-cow-clipart-transparent-background-hd-png.png',
     eng: 'moo',
-    fr: 'meux',
+    fr: 'meuh meuh',
     bonus: 'eum-mae',
     ans: 'Korean' 
 }
@@ -46,7 +46,7 @@ const sheep = {
     name: 'sheep',
     pic: 'https://clipart.world/wp-content/uploads/2020/07/cute-sheep.jpg',
     eng: 'baa',
-    fr: 'beee',
+    fr: 'beee beee',
     bonus: 'mbek',
     ans: 'Indonesian'
 }
