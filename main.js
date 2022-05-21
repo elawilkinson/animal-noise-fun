@@ -10,7 +10,9 @@ const dog = {
     name: 'dog',
     pic: 'https://clipart.world/wp-content/uploads/2020/06/dog-vector-1502158.jpg',
     eng: 'woof',
-    fr: 'ouaf ouaf' ,
+    fr: 'ouaf ouaf',
+    de: 'wau wau',
+    ar: 'hao hao',
     bonus: 'blaf',
     ans: 'Dutch'
 }
@@ -20,6 +22,8 @@ const cat = {
     pic: 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/6006/cat-clipart-md.png',
     eng: 'meow',
     fr: 'miaou miaou',
+    de: 'miau miau',
+    ar: 'miau miau',
     bonus: 'niav',
     ans: 'Ukrainian'
 }
@@ -29,6 +33,8 @@ const duck = {
     pic: 'https://clipart.world/wp-content/uploads/2020/07/happy-duck.jpg',
     eng: 'quack',
     fr: 'coin coin',
+    de: 'quacken',
+    ar: 'wak wak',
     bonus: 'praaks',
     ans: 'Estonian'
 }
@@ -38,6 +44,8 @@ const cow = {
     pic: 'https://www.kindpng.com/picc/m/38-386643_cow-clipart-cow-clipart-transparent-background-hd-png.png',
     eng: 'moo',
     fr: 'meuh meuh',
+    de: 'muh muh',
+    ar: 'moo moo',
     bonus: 'eum-mae',
     ans: 'Korean' 
 }
@@ -47,6 +55,8 @@ const sheep = {
     pic: 'https://clipart.world/wp-content/uploads/2020/07/cute-sheep.jpg',
     eng: 'baa',
     fr: 'beee beee',
+    de: 'maeh maeh',
+    ar: 'baa baa',
     bonus: 'mbek',
     ans: 'Indonesian'
 }
@@ -56,12 +66,14 @@ const rooster = {
     pic: 'https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/6269/rooster-clipart-xl.png',
     eng: 'cock-a-doodle-doo',
     fr: 'cocorico',
+    de: 'kikeriki',
+    ar: 'ee-eeer',
     bonus: 'tsoo-ghoo-roo-ghoo',
     ans: 'Armenian'
 }
 
 const animalList = [dog, cat, duck, cow, sheep, rooster];
-const langList = ['fr', 'eng', 'bonus'];
+const langList = ['fr', 'eng', 'de', 'ar', 'bonus'];
 
 
 // FINDING A RANDOM ANIMAL FOR THE 'SURPRISE' OPTION
@@ -76,7 +88,6 @@ function randoReturn(){
     let randoName = randomAnim.name;
     return randoName;
 }
-
 let surpAn = randoReturn();
 
 
@@ -113,6 +124,12 @@ function detailDisplay(){
         animalDisplay.innerText = `This ${animalDisp} would simply say...\n ${animalList[arrayPos].fr}`;
         }
     else if(langRel === 2){
+        animalDisplay.innerText = `This ${animalDisp} would simply say...\n ${animalList[arrayPos].de}`;
+        }
+    else if(langRel === 3){
+        animalDisplay.innerText = `This ${animalDisp} would simply say...\n ${animalList[arrayPos].ar}`;
+        }
+    else if(langRel === 4){
         animalDisplay.innerText = `This ${animalDisp} would simply say...\n ${animalList[arrayPos].bonus}, 
         because she is ${animalList[arrayPos].ans}`
         }
@@ -120,16 +137,3 @@ function detailDisplay(){
    
 submitButton.addEventListener('click', detailDisplay);
 
-// ## PLAN
-// # Find (5) animals 
-// # Store their noises in English
-// # Store their noises in French
-// # Store a list of excellent noises as a bonus option
-// # Find pictures of the animals
-// # Create randomise option for animals
-// # Create randomise option for language
-// # Create animal button
-// # Create language button
-// # Create display window for final result
-// # Display chosen animal in h2
-// # Display chosen language in h2
